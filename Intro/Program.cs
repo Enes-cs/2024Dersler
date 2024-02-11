@@ -72,3 +72,44 @@ for (int i = 0; i < courses2.Length; i++)
     Console.WriteLine(courses2[i].Name + " / " + courses2[i].Price);
 }
 courseManager.GetAll();
+
+Console.WriteLine("Kod Bitti");
+
+IndividualCustomer customer1  = new IndividualCustomer();
+customer1.Id = 1;
+customer1.NationalIdentity = "564654564654";
+customer1.FirstName = "Aslı";
+customer1.LastName = "Karayiğit";
+customer1.CustomerNumber = "1234";
+
+IndividualCustomer customer2 = new IndividualCustomer();
+customer2.Id = 2;
+customer2.NationalIdentity = "5646545264654";
+customer2.FirstName = "Özgür";
+customer2.LastName = "Atılgan";
+customer2.CustomerNumber = "123444";
+
+
+CorporateCustomer customer3 = new CorporateCustomer();
+customer3.Id = 3;
+customer3.Name = "Kodlama.io";
+customer3.CustomerNumber = "54654545";
+customer3.TaxNumber = "1234547654";
+
+CorporateCustomer customer4 = new CorporateCustomer();
+customer4.Id = 4;
+customer4.Name = "Abc";
+customer4.CustomerNumber = "654779";
+customer4.TaxNumber = "1234547654";
+
+//value types --> int, bool, double...
+//reference types --> array, class, interface...
+
+BaseCustomer[] customers = {customer1,  customer2, customer3, customer4}; 
+
+//polymorphism
+
+foreach(BaseCustomer customer in customers)
+{
+    Console.WriteLine(customer.CustomerNumber);
+}
