@@ -11,7 +11,4 @@
     <None Remove="Entities\" />
     <None Remove="Business\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
-  </ItemGroup>
 </Project>
